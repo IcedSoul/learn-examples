@@ -1,0 +1,5 @@
+.idea/
+TestApp/bin/
+TestApp/obj/
+TestApp/*.proj
+TestApp/*.userprefs
