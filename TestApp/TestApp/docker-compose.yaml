@@ -6,5 +6,5 @@ services:
     ports:
       - "9999:80"
     volumes:
-      - ./bin/Release/net7.0/browser-wasm/AppBundle:/usr/share/nginx/html
+      - ./bin/Release/net8.0/browser-wasm/AppBundle:/usr/share/nginx/html
     restart: always

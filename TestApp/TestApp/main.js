@@ -10,7 +10,10 @@ const config = getConfig();
 const exports = await getAssemblyExports(config.mainAssemblyName);
 
 // Access JSExport methods using exports.<Namespace>.<Type>.<Method>
-const result = exports.Sample.Add(1, 2);
-
+document.getElementById("btn").onclick = () => {
+    console.log("button clicked");
+    document.getElementById("out").innerHTML = "running...";
+    const result = exports.Sample.Test();
 // Display the result of the .NET method
-document.getElementById("out").innerHTML = `Result: ${result}`;
+    document.getElementById("out").innerHTML = `${result}`;
+}

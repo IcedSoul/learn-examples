@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
@@ -16,7 +16,8 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <WasmEmitSymbolMap>false</WasmEmitSymbolMap>
 
-        <RunAOTCompilation>true</RunAOTCompilation>
+<!--        <RunAOTCompilation>true</RunAOTCompilation>-->
+<!--        <InvariantTimezone>true</InvariantTimezone>-->
     </PropertyGroup>
     
     <ItemGroup>
