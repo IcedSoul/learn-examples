@@ -1,17 +1,14 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices.JavaScript;
+﻿using System;
+using System.Diagnostics;
 
-// Create a "Main" method. This is required by the tooling.
-return;
-
-public partial class Sample
+class Program
 {
     // Make the method accessible from JS
-    [JSExport]
-    internal static string Test()
+    static void Main(string[] args)
     {
+        Console.WriteLine("Start Processing...");
         var time = AvgCost(100000000, 10);
-        return $"Cost Time: {time}ms";
+        Console.WriteLine($"Cost Time: {time}ms");
     }
 
     static double AvgCost(int n, int times)
@@ -21,6 +18,7 @@ public partial class Sample
         for (int i = 0; i < times; i++)
         {
             CalculatePi(n);
+            Console.WriteLine($"Processing... {i + 1}/{times}");
         }
         timer.Stop();
         return timer.ElapsedMilliseconds / (float)times;
